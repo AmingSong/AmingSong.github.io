@@ -32,7 +32,7 @@ medilark/
 ├── src/                # React + Tailwind frontend
 │   ├── components/     # Reusable UI elements (cards, navbar, etc.)
 │   ├── pages/          # Page views (Home, Dataset, Tools)
-│   └── data/           # Dataset cards in JSON or YAML
+├── data/           # Dataset cards in JSON or YAML
 ├── scripts/            # Python scripts for preprocessing datasets
 ├── README.md
 └── package.json
