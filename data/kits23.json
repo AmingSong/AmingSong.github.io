@@ -1,0 +1,14 @@
+{
+  "name": "KiTS23",
+  "description": "Kidney Tumor Segmentation Challenge 2023 dataset with 300 CT cases.",
+  "url": "https://kits-challenge.org/kits23",
+  "tasks": ["Segmentation"],
+  "modality": ["CT"],
+  "organ": ["Kidney", "Tumor"],
+  "license": "CC BY 4.0",
+  "release_date": "2023-04-01",
+  "size": "28 GB",
+  "institution": "University of Minnesota",
+  "citation": "Heller et al., KiTS23 Challenge, MICCAI 2023"
+}
+
