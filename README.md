@@ -18,10 +18,10 @@ MediLark aims to help medical AI researchers quickly find, understand, and prepr
 
 ## Key Features
 
-**Dataset Cards** — Curated, structured profiles for major public datasets
-**Preprocessing Toolkit** — Downloadable scripts for resampling, cropping, and label remapping
-**Searchable Navigator** — Easy-to-use interface for finding datasets by modality, task, or label
-**Community Ready** — Contributions encouraged via GitHub
+- **Dataset Cards** — Curated, structured profiles for major public datasets
+- **Preprocessing Toolkit** — Downloadable scripts for resampling, cropping, and label remapping
+- **Searchable Navigator** — Easy-to-use interface for finding datasets by modality, task, or label
+- **Community Ready** — Contributions encouraged via GitHub
 
 
 ## Project Structure
