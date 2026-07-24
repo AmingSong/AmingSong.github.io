@@ -47,14 +47,14 @@
       top: 0;
       bottom: 0;
 
-      width: calc((100vw - 1480px) / 2);
+      width: calc((100vw - 1580px) / 2);
       min-width: 0;
-      max-width: 180px;
+      max-width: 150px;
 
       pointer-events: none;
       z-index: 0;
 
-      opacity: 0.42;
+      opacity: 0.4;
 
       background-image:
         radial-gradient(
@@ -116,11 +116,11 @@
       position: relative;
       z-index: 1;
 
-      width: calc(100% - 56px);
-      max-width: 1440px;
+      width: calc(100% - 40px);
+      max-width: 1520px;
 
-      margin: 24px auto;
-      padding: 30px 46px 34px;
+      margin: 20px auto;
+      padding: 28px 44px 32px;
 
       font-family:
         "Helvetica Neue",
@@ -172,8 +172,8 @@
     h2 {
       position: relative;
 
-      margin-top: 1.2em;
-      margin-bottom: 0.42em;
+      margin-top: 1.15em;
+      margin-bottom: 0.4em;
       padding-bottom: 0.3em;
 
       color: var(--heading-color);
@@ -199,8 +199,8 @@
     }
 
     h3 {
-      margin-top: 0.55em;
-      margin-bottom: 0.18em;
+      margin-top: 0.5em;
+      margin-bottom: 0.16em;
 
       color: #41413e;
 
@@ -209,18 +209,18 @@
     }
 
     p {
-      margin-top: 0.22em;
-      margin-bottom: 0.42em;
+      margin-top: 0.2em;
+      margin-bottom: 0.4em;
     }
 
     ul {
-      margin-top: 0.18em;
-      margin-bottom: 0.38em;
+      margin-top: 0.16em;
+      margin-bottom: 0.36em;
       padding-left: 1.25em;
     }
 
     li {
-      margin-bottom: 0.32em;
+      margin-bottom: 0.3em;
       padding-left: 0.15em;
     }
 
@@ -344,60 +344,87 @@
       border-top: 1px solid var(--border-color);
     }
 
+    .publication-list {
+      margin-top: 0.12em;
+      margin-bottom: 0.38em;
+      padding-left: 1.65em;
+    }
+
+    .publication-list li {
+      margin-bottom: 0.34em;
+      padding-left: 0.2em;
+      line-height: 1.45;
+    }
+
+    .publication-list li::marker {
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
     .education-list {
-      max-width: 900px;
-      margin-top: 0.1em;
+      max-width: 980px;
+      margin-top: 0.08em;
     }
 
     .education-item {
       display: grid;
-      grid-template-columns: 180px minmax(0, 1fr);
+      grid-template-columns: 205px minmax(0, 1fr);
       align-items: center;
-      column-gap: 26px;
+      column-gap: 28px;
 
-      min-height: 76px;
-      padding: 0;
+      min-height: 92px;
+      padding: 1px 0;
     }
 
     .education-item + .education-item {
-      margin-top: 0;
+      margin-top: 1px;
     }
 
     .education-logo-box {
-      width: 180px;
-      height: 68px;
+      width: 205px;
+      height: 88px;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      overflow: hidden;
+      overflow: visible;
     }
 
     .education-logo {
       display: block;
+
       object-fit: contain;
+      object-position: center;
+
       flex-shrink: 0;
+      transform-origin: center center;
     }
 
     .logo-msu {
-      width: 62px;
-      height: 62px;
+      width: 82px;
+      height: 82px;
+
+      transform: translateY(0);
     }
 
     .logo-kcl {
-      width: 82px;
+      width: 102px;
       height: auto;
+
+      transform: translateY(1px);
     }
 
     .logo-liverpool {
-      width: 136px;
+      width: 150px;
       height: auto;
+
+      transform: translateY(1px);
     }
 
     .education-details {
       min-width: 0;
-      max-width: 620px;
+      max-width: 700px;
       text-align: left;
     }
 
@@ -437,10 +464,21 @@
       white-space: nowrap;
     }
 
-    @media (max-width: 1520px) {
+    @media (max-width: 1600px) {
       html::before,
       html::after {
         display: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      body {
+        width: calc(100% - 24px);
+        padding: 26px 28px 30px;
+      }
+
+      .education-list {
+        max-width: none;
       }
     }
 
@@ -475,37 +513,33 @@
       }
 
       h2 {
-        margin-top: 1.1em;
+        margin-top: 1.05em;
         font-size: 1.28em;
       }
 
-      .education-list {
-        max-width: none;
-      }
-
       .education-item {
-        grid-template-columns: 104px minmax(0, 1fr);
+        grid-template-columns: 112px minmax(0, 1fr);
         column-gap: 16px;
 
-        min-height: 74px;
+        min-height: 80px;
       }
 
       .education-logo-box {
-        width: 104px;
-        height: 66px;
+        width: 112px;
+        height: 72px;
       }
 
       .logo-msu {
-        width: 56px;
-        height: 56px;
+        width: 62px;
+        height: 62px;
       }
 
       .logo-kcl {
-        width: 74px;
+        width: 76px;
       }
 
       .logo-liverpool {
-        width: 98px;
+        width: 104px;
       }
 
       .education-details h3 {
@@ -539,18 +573,18 @@
       }
 
       .education-item {
-        grid-template-columns: 92px minmax(0, 1fr);
+        grid-template-columns: 96px minmax(0, 1fr);
         column-gap: 12px;
       }
 
       .education-logo-box {
-        width: 92px;
-        height: 64px;
+        width: 96px;
+        height: 68px;
       }
 
       .logo-msu {
-        width: 52px;
-        height: 52px;
+        width: 56px;
+        height: 56px;
       }
 
       .logo-kcl {
@@ -558,7 +592,7 @@
       }
 
       .logo-liverpool {
-        width: 88px;
+        width: 90px;
       }
     }
   </style>
@@ -592,13 +626,27 @@
 
       <p>
         Ph.D. Student,
-        <a href="https://midilab.notion.site/" target="_blank">MIDI Lab</a><br>
+        <a
+          href="https://midilab.notion.site/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MIDI Lab
+        </a><br>
 
-        <a href="https://cmse.msu.edu/" target="_blank">
+        <a
+          href="https://cmse.msu.edu/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Department of Computational Mathematics, Science &amp; Engineering (CMSE)
         </a><br>
 
-        <a href="https://msu.edu/" target="_blank">
+        <a
+          href="https://msu.edu/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Michigan State University
         </a><br>
 
@@ -606,6 +654,7 @@
         <a
           href="https://engineering.msu.edu/faculty/adam-alessio"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Dr. Adam Alessio
         </a><br>
@@ -615,15 +664,27 @@
           songtai1@msu.edu
         </a>
         |
-        <a href="https://www.linkedin.com/in/tairan-s/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/tairan-s/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           LinkedIn
         </a>
         |
-        <a href="TairanSong_RESUME.pdf" target="_blank">
+        <a
+          href="TairanSong_RESUME.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           CV
         </a>
         |
-        <a href="https://github.com/Tairan-Song" target="_blank">
+        <a
+          href="https://github.com/Tairan-Song"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub
         </a>
       </p>
@@ -632,14 +693,21 @@
 
   <p>
     I am a Ph.D. student in the
-    <a href="https://midilab.notion.site/" target="_blank">MIDI Lab</a>
+    <a
+      href="https://midilab.notion.site/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      MIDI Lab
+    </a>
     at Michigan State University, advised by
     <a
       href="https://engineering.msu.edu/faculty/adam-alessio"
       target="_blank"
+      rel="noopener noreferrer"
     >
-      Dr. Adam Alessio.
-    </a>
+      Dr. Adam Alessio
+    </a>.
     My research lies at the intersection of
     <b>medical image analysis, statistical modeling, and deep learning</b>,
     with a primary focus on
@@ -681,67 +749,74 @@
 
   <h3>Journal Article</h3>
 
-  <p>
-    Zhang, T., Jia, H., <b>Song, T.</b>, Lv, L., Gulhan, D. C., ..., &amp; Shen, N. (2023).
-    <i>
-      <a
-        href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-023-01269-1"
-        target="_blank"
-      >
-        De novo identification of expressed cancer somatic mutations from
-        single-cell RNA sequencing data.
-      </a>
-    </i>
-    <b>Genome Medicine</b>, 15(1), 115.
-  </p>
+  <ol class="publication-list">
+    <li>
+      Zhang, T., Jia, H., <b>Song, T.</b>, Lv, L., Gulhan, D. C., ...,
+      &amp; Shen, N. (2023).
+      <i>
+        <a
+          href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-023-01269-1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          De novo identification of expressed cancer somatic mutations from
+          single-cell RNA sequencing data.
+        </a>
+      </i>
+      <b>Genome Medicine</b>, 15(1), 115.
+    </li>
+  </ol>
 
   <h3>Conference Presentations</h3>
 
-  <p>
-    <b>Song, T.</b>, Noyes-Ardrey, S., Muterspaugh, R. D.,
-    Munavar Ali, M. A., ..., &amp; Alessio, A. M. (2026).
-    <i>
-      Core-to-Margin Radiomic Profiling for Predicting Kidney Cancer Grade
-      from Variable-Phase CT.
-    </i>
-    Scientific Poster Presentation,
-    <b>
-      112th Scientific Assembly and Annual Meeting of the Radiological Society
-      of North America (RSNA 2026)
-    </b>,
-    McCormick Place, Chicago, IL, November 29–December 3, 2026.
-  </p>
+  <ol class="publication-list">
+    <li>
+      <b>Song, T.</b>, Noyes-Ardrey, S., Muterspaugh, R. D.,
+      Munavar Ali, M. A., ..., &amp; Alessio, A. M. (2026).
+      <i>
+        Core-to-Margin Radiomic Profiling for Predicting Kidney Cancer Grade
+        from Variable-Phase CT.
+      </i>
+      Scientific Poster Presentation,
+      <b>
+        112th Scientific Assembly and Annual Meeting of the Radiological
+        Society of North America (RSNA 2026)
+      </b>,
+      McCormick Place, Chicago, IL, November 29–December 3, 2026.
+    </li>
 
-  <p>
-    Muterspaugh, R. D., Munavar Ali, M. A., <b>Song, T.</b>, ...,
-    &amp; Alessio, A. M. (2026).
-    <i>
-      <a
-        href="https://scholarlyworks.corewellhealth.org/corewellhealth_west_research_confabstract/178/"
-        target="_blank"
-      >
-        Deep Learning-Based Detection of High-Risk Renal Masses from
-        All-Cause Abdominal CT.
-      </a>
-    </i>
-    Abstract Presentation,
-    <b>Corewell Health West Research Day</b>,
-    Grand Rapids, MI, May 8, 2026. Abstract 1968.
-  </p>
+    <li>
+      Muterspaugh, R. D., Munavar Ali, M. A., <b>Song, T.</b>, ...,
+      &amp; Alessio, A. M. (2026).
+      <i>
+        <a
+          href="https://scholarlyworks.corewellhealth.org/corewellhealth_west_research_confabstract/178/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Deep Learning-Based Detection of High-Risk Renal Masses from
+          All-Cause Abdominal CT.
+        </a>
+      </i>
+      Abstract Presentation,
+      <b>Corewell Health West Research Day</b>,
+      Grand Rapids, MI, May 8, 2026. Abstract 1968.
+    </li>
 
-  <p>
-    <b>Song, T.</b> (2024).
-    <i>
-      Enhancing Transcription Factor Binding Site Prediction with Epigenetic
-      Data: A BERT-Based Machine Learning Innovation.
-    </i>
-    Poster Presentation,
-    <b>
-      20th Annual Meeting of the MidSouth Computational Biology and
-      Bioinformatics Society (MCBIOS 2024)
-    </b>,
-    Emory University, Atlanta, GA, March 22–24, 2024.
-  </p>
+    <li>
+      <b>Song, T.</b> (2024).
+      <i>
+        Enhancing Transcription Factor Binding Site Prediction with Epigenetic
+        Data: A BERT-Based Machine Learning Innovation.
+      </i>
+      Poster Presentation,
+      <b>
+        20th Annual Meeting of the MidSouth Computational Biology and
+        Bioinformatics Society (MCBIOS 2024)
+      </b>,
+      Emory University, Atlanta, GA, March 22–24, 2024.
+    </li>
+  </ol>
 
   <h2>Education</h2>
 
@@ -758,18 +833,27 @@
 
       <div class="education-details">
         <h3>Michigan State University</h3>
-        <p class="education-location">East Lansing, MI, USA</p>
+
+        <p class="education-location">
+          East Lansing, MI, USA
+        </p>
 
         <p class="education-degree">
           <span class="education-program">
             Ph.D. in Computational Mathematics, Science &amp; Engineering
           </span>
-          <span class="education-date">2023–Present</span>
+          <span class="education-date">
+            2023–Present
+          </span>
         </p>
 
         <p class="education-degree">
-          <span class="education-program">M.S. in CMSE</span>
-          <span class="education-date">2026</span>
+          <span class="education-program">
+            M.S. in CMSE
+          </span>
+          <span class="education-date">
+            2026
+          </span>
         </p>
       </div>
     </div>
@@ -785,13 +869,18 @@
 
       <div class="education-details">
         <h3>King's College London</h3>
-        <p class="education-location">London, United Kingdom</p>
+
+        <p class="education-location">
+          London, United Kingdom
+        </p>
 
         <p class="education-degree">
           <span class="education-program">
             M.Sc. in Applied Statistical Modelling &amp; Health Informatics
           </span>
-          <span class="education-date">2021–2022</span>
+          <span class="education-date">
+            2021–2022
+          </span>
         </p>
       </div>
     </div>
@@ -807,13 +896,18 @@
 
       <div class="education-details">
         <h3>University of Liverpool</h3>
-        <p class="education-location">Liverpool, United Kingdom</p>
+
+        <p class="education-location">
+          Liverpool, United Kingdom
+        </p>
 
         <p class="education-degree">
           <span class="education-program">
             B.Sc. in Mathematics &amp; Statistics
           </span>
-          <span class="education-date">2018–2021</span>
+          <span class="education-date">
+            2018–2021
+          </span>
         </p>
       </div>
     </div>
@@ -856,7 +950,11 @@
 
   <p style="font-size: 0.95em; color: #555552; margin-top: 1em;">
     A complete version of my curriculum vitae can be downloaded
-    <a href="TairanSong_RESUME.pdf" target="_blank">
+    <a
+      href="TairanSong_RESUME.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       here (PDF)
     </a>.
   </p>
