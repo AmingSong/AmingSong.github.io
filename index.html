@@ -350,30 +350,29 @@
     }
 
 
-    /* Education: logo on the left, degree information on the right */
+    /* Education: compact two-column layout, matching the reference style */
     .education-list {
-      margin-top: 0.55em;
+      max-width: 900px;
+      margin-top: 0.75em;
     }
 
     .education-item {
       display: grid;
-      grid-template-columns: 210px minmax(0, 1fr);
+      grid-template-columns: 230px minmax(0, 1fr);
       align-items: center;
-      column-gap: 42px;
+      column-gap: 44px;
 
-      min-height: 150px;
-      padding: 24px 0;
-
-      border-bottom: 1px solid var(--border-color);
+      min-height: 132px;
+      padding: 14px 0;
     }
 
-    .education-item:last-child {
-      border-bottom: none;
+    .education-item + .education-item {
+      margin-top: 18px;
     }
 
     .education-logo-box {
-      width: 210px;
-      height: 122px;
+      width: 230px;
+      height: 108px;
 
       display: flex;
       align-items: center;
@@ -388,51 +387,53 @@
       flex-shrink: 0;
     }
 
-    /* Individual sizing keeps the three differently shaped logos balanced. */
+    /* Each logo is sized by visual weight rather than by one shared width. */
     .logo-msu {
-      width: 112px;
-      height: 112px;
+      width: 86px;
+      height: 86px;
     }
 
     .logo-kcl {
-      width: 150px;
+      width: 112px;
       height: auto;
     }
 
     .logo-liverpool {
-      width: 205px;
+      width: 172px;
       height: auto;
     }
 
     .education-details {
       min-width: 0;
+      max-width: 610px;
       text-align: left;
     }
 
     .education-details h3 {
-      margin: 0 0 0.18em;
+      margin: 0 0 0.08em;
       color: var(--text-primary);
-      font-size: 1.24em;
+      font-size: 1.16em;
     }
 
     .education-location {
-      margin: 0 0 0.65em;
+      margin: 0 0 0.28em;
       color: var(--text-secondary);
-      font-size: 0.95em;
+      font-size: 0.93em;
     }
 
     .education-degree {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 24px;
-
-      margin: 0.28em 0;
+      margin: 0.12em 0 0.42em;
       text-align: left;
+      line-height: 1.42;
+    }
+
+    .education-program {
+      display: block;
+      font-style: italic;
     }
 
     .education-date {
-      flex-shrink: 0;
+      display: block;
       color: var(--text-secondary);
       white-space: nowrap;
     }
@@ -479,38 +480,37 @@
         font-size: 1.35em;
       }
 
+      .education-list {
+        max-width: none;
+      }
+
       .education-item {
-        grid-template-columns: 150px minmax(0, 1fr);
-        column-gap: 24px;
-        min-height: 132px;
-        padding: 20px 0;
+        grid-template-columns: 118px minmax(0, 1fr);
+        column-gap: 20px;
+        min-height: 112px;
+        padding: 12px 0;
       }
 
       .education-logo-box {
-        width: 150px;
-        height: 105px;
+        width: 118px;
+        height: 88px;
       }
 
       .logo-msu {
-        width: 92px;
-        height: 92px;
+        width: 70px;
+        height: 70px;
       }
 
       .logo-kcl {
-        width: 125px;
+        width: 88px;
       }
 
       .logo-liverpool {
-        width: 148px;
+        width: 112px;
       }
 
-      .education-degree {
-        display: block;
-      }
-
-      .education-date {
-        display: block;
-        margin-top: 0.08em;
+      .education-details h3 {
+        font-size: 1.05em;
       }
     }
 
@@ -761,12 +761,12 @@
         <p class="education-location">East Lansing, MI, USA</p>
 
         <p class="education-degree">
-          <span>Ph.D. in Computational Mathematics, Science &amp; Engineering</span>
+          <span class="education-program">Ph.D. in Computational Mathematics, Science &amp; Engineering</span>
           <span class="education-date">2023–Present</span>
         </p>
 
         <p class="education-degree">
-          <span>M.S. in Computational Mathematics, Science &amp; Engineering</span>
+          <span class="education-program">M.S. in CMSE</span>
           <span class="education-date">2026</span>
         </p>
       </div>
@@ -786,7 +786,7 @@
         <p class="education-location">London, United Kingdom</p>
 
         <p class="education-degree">
-          <span>M.Sc. in Applied Statistical Modelling &amp; Health Informatics</span>
+          <span class="education-program">M.Sc. in Applied Statistical Modelling &amp; Health Informatics</span>
           <span class="education-date">2021–2022</span>
         </p>
       </div>
@@ -806,7 +806,7 @@
         <p class="education-location">Liverpool, United Kingdom</p>
 
         <p class="education-degree">
-          <span>B.Sc. in Mathematics &amp; Statistics</span>
+          <span class="education-program">B.Sc. in Mathematics &amp; Statistics</span>
           <span class="education-date">2018–2021</span>
         </p>
       </div>
