@@ -38,13 +38,6 @@
         );
     }
 
-    /*
-      Decorative research-grid panels.
-
-      These panels appear only in the otherwise-empty margins on
-      sufficiently wide screens. They contain no information and do
-      not affect the page layout.
-    */
     html::before,
     html::after {
       content: "";
@@ -52,7 +45,6 @@
       position: fixed;
       top: 0;
       bottom: 0;
-
 
       width: calc((100vw - 1240px) / 2);
       min-width: 0;
@@ -129,14 +121,16 @@
         Arial,
         sans-serif;
 
+      font-size: 15px;
+      line-height: 1.55;
+
       color: var(--text-primary);
       background: var(--paper-background);
 
       max-width: 1200px;
-      margin: 52px auto;
-      padding: 46px 64px 50px;
+      margin: 38px auto;
+      padding: 36px 58px 40px;
 
-      line-height: 1.75;
       text-align: justify;
       text-justify: inter-word;
 
@@ -148,9 +142,6 @@
         0 2px 8px rgba(25, 25, 23, 0.04);
     }
 
-    /*
-      Thin inner rule gives the page a restrained printed-paper feel.
-    */
     body::before {
       content: "";
 
@@ -165,24 +156,24 @@
 
     h1 {
       margin-top: 0;
-      margin-bottom: 0.25em;
+      margin-bottom: 0.2em;
 
       color: #1c1c1b;
-      font-size: 2.45em;
+      font-size: 2.35em;
       font-weight: 700;
       letter-spacing: -0.025em;
-      line-height: 1.15;
+      line-height: 1.12;
     }
 
     h2 {
       position: relative;
 
-      margin-top: 2.35em;
-      margin-bottom: 0.85em;
-      padding-bottom: 0.5em;
+      margin-top: 1.75em;
+      margin-bottom: 0.6em;
+      padding-bottom: 0.35em;
 
       color: var(--heading-color);
-      font-size: 1.48em;
+      font-size: 1.42em;
       font-weight: 650;
       letter-spacing: -0.01em;
 
@@ -203,26 +194,27 @@
     }
 
     h3 {
-      margin-top: 1.35em;
-      margin-bottom: 0.45em;
+      margin-top: 0.9em;
+      margin-bottom: 0.3em;
 
       color: #41413e;
-      font-size: 1.12em;
+      font-size: 1.08em;
       font-weight: 650;
     }
 
     p {
-      margin-top: 0.65em;
-      margin-bottom: 0.95em;
+      margin-top: 0.4em;
+      margin-bottom: 0.65em;
     }
 
     ul {
-      margin-top: 0.55em;
+      margin-top: 0.35em;
+      margin-bottom: 0.65em;
       padding-left: 1.25em;
     }
 
     li {
-      margin-bottom: 0.9em;
+      margin-bottom: 0.55em;
       padding-left: 0.15em;
     }
 
@@ -261,10 +253,10 @@
 
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 26px;
 
-      margin: -12px -16px 30px;
-      padding: 24px;
+      margin: -8px -12px 20px;
+      padding: 20px;
 
       background:
         linear-gradient(
@@ -277,10 +269,6 @@
       border-radius: 4px;
     }
 
-    /*
-      Small corner marks echo figure-registration marks used in
-      technical drawings and printed research material.
-    */
     .intro::before,
     .intro::after {
       content: "";
@@ -310,8 +298,8 @@
     }
 
     img.profile {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
 
       object-fit: cover;
       flex-shrink: 0;
@@ -331,48 +319,46 @@
 
     .intro-text h1 {
       margin-top: 0;
-      margin-bottom: 0.4em;
+      margin-bottom: 0.3em;
     }
 
     .intro-text p {
       margin-bottom: 0;
 
       color: var(--text-secondary);
-      line-height: 1.65;
+      line-height: 1.5;
     }
 
     hr {
-      margin-top: 44px;
-      margin-bottom: 22px;
+      margin-top: 28px;
+      margin-bottom: 16px;
 
       border: none;
       border-top: 1px solid var(--border-color);
     }
 
-
-    /* Education: compact two-column layout, matching the reference style */
     .education-list {
       max-width: 900px;
-      margin-top: 0.75em;
+      margin-top: 0.3em;
     }
 
     .education-item {
       display: grid;
-      grid-template-columns: 230px minmax(0, 1fr);
+      grid-template-columns: 190px minmax(0, 1fr);
       align-items: center;
-      column-gap: 44px;
+      column-gap: 30px;
 
-      min-height: 104px;
-      padding: 6px 0;
+      min-height: 88px;
+      padding: 2px 0;
     }
 
     .education-item + .education-item {
-      margin-top: 6px;
+      margin-top: 3px;
     }
 
     .education-logo-box {
-      width: 230px;
-      height: 108px;
+      width: 190px;
+      height: 76px;
 
       display: flex;
       align-items: center;
@@ -387,19 +373,18 @@
       flex-shrink: 0;
     }
 
-    /* Each logo is sized by visual weight rather than by one shared width. */
     .logo-msu {
-      width: 86px;
-      height: 86px;
+      width: 66px;
+      height: 66px;
     }
 
     .logo-kcl {
-      width: 112px;
+      width: 86px;
       height: auto;
     }
 
     .logo-liverpool {
-      width: 172px;
+      width: 142px;
       height: auto;
     }
 
@@ -410,21 +395,25 @@
     }
 
     .education-details h3 {
-      margin: 0 0 0.08em;
+      margin: 0 0 0.02em;
+
       color: var(--text-primary);
-      font-size: 1.16em;
+      font-size: 1.04em;
     }
 
     .education-location {
-      margin: 0 0 0.28em;
+      margin: 0 0 0.12em;
+
       color: var(--text-secondary);
-      font-size: 0.93em;
+      font-size: 0.88em;
     }
 
     .education-degree {
-      margin: 0.12em 0 0.42em;
+      margin: 0.04em 0 0.16em;
+
+      font-size: 0.92em;
+      line-height: 1.3;
       text-align: left;
-      line-height: 1.42;
     }
 
     .education-program {
@@ -434,13 +423,12 @@
 
     .education-date {
       display: block;
+
       color: var(--text-secondary);
+      font-size: 0.92em;
       white-space: nowrap;
     }
 
-    /*
-      Hide the side ornaments before they begin crowding the page.
-    */
     @media (max-width: 1320px) {
       html::before,
       html::after {
@@ -448,12 +436,12 @@
       }
     }
 
-    /* Tablet and mobile layout */
     @media (max-width: 700px) {
       body {
-        margin: 18px 12px;
-        padding: 30px 24px 36px;
+        margin: 14px 10px;
+        padding: 24px 20px 28px;
 
+        font-size: 14px;
         border-radius: 4px;
       }
 
@@ -461,23 +449,23 @@
         flex-direction: column;
         align-items: flex-start;
 
-        gap: 18px;
-        margin: -6px -8px 26px;
-        padding: 20px;
+        gap: 14px;
+        margin: -4px -6px 18px;
+        padding: 16px;
       }
 
       img.profile {
-        width: 155px;
-        height: 155px;
+        width: 145px;
+        height: 145px;
       }
 
       h1 {
-        font-size: 2.05em;
+        font-size: 2em;
       }
 
       h2 {
-        margin-top: 2em;
-        font-size: 1.35em;
+        margin-top: 1.65em;
+        font-size: 1.32em;
       }
 
       .education-list {
@@ -485,39 +473,44 @@
       }
 
       .education-item {
-        grid-template-columns: 118px minmax(0, 1fr);
-        column-gap: 20px;
-        min-height: 112px;
-        padding: 12px 0;
+        grid-template-columns: 104px minmax(0, 1fr);
+        column-gap: 16px;
+
+        min-height: 78px;
+        padding: 2px 0;
+      }
+
+      .education-item + .education-item {
+        margin-top: 4px;
       }
 
       .education-logo-box {
-        width: 118px;
-        height: 88px;
-      }
-
-      .logo-msu {
-        width: 70px;
+        width: 104px;
         height: 70px;
       }
 
+      .logo-msu {
+        width: 58px;
+        height: 58px;
+      }
+
       .logo-kcl {
-        width: 88px;
+        width: 76px;
       }
 
       .logo-liverpool {
-        width: 112px;
+        width: 100px;
       }
 
       .education-details h3 {
-        font-size: 1.05em;
+        font-size: 1em;
       }
     }
 
     @media (max-width: 420px) {
       body {
         margin: 0;
-        padding: 24px 18px 32px;
+        padding: 20px 16px 26px;
 
         border: none;
         border-radius: 0;
@@ -529,35 +522,35 @@
       }
 
       .intro {
-        margin: 0 0 24px;
+        margin: 0 0 18px;
       }
 
       img.profile {
-        width: 140px;
-        height: 140px;
+        width: 132px;
+        height: 132px;
       }
 
       .education-item {
-        grid-template-columns: 112px minmax(0, 1fr);
-        column-gap: 16px;
+        grid-template-columns: 94px minmax(0, 1fr);
+        column-gap: 12px;
       }
 
       .education-logo-box {
-        width: 112px;
-        height: 88px;
+        width: 94px;
+        height: 66px;
       }
 
       .logo-msu {
-        width: 76px;
-        height: 76px;
+        width: 54px;
+        height: 54px;
       }
 
       .logo-kcl {
-        width: 104px;
+        width: 72px;
       }
 
       .logo-liverpool {
-        width: 110px;
+        width: 90px;
       }
     }
   </style>
@@ -742,8 +735,7 @@
     Emory University, Atlanta, GA, March 22–24, 2024.
   </p>
 
-
-<h2>Education</h2>
+  <h2>Education</h2>
 
   <div class="education-list">
 
@@ -761,7 +753,9 @@
         <p class="education-location">East Lansing, MI, USA</p>
 
         <p class="education-degree">
-          <span class="education-program">Ph.D. in Computational Mathematics, Science &amp; Engineering</span>
+          <span class="education-program">
+            Ph.D. in Computational Mathematics, Science &amp; Engineering
+          </span>
           <span class="education-date">2023–Present</span>
         </p>
 
@@ -786,7 +780,9 @@
         <p class="education-location">London, United Kingdom</p>
 
         <p class="education-degree">
-          <span class="education-program">M.Sc. in Applied Statistical Modelling &amp; Health Informatics</span>
+          <span class="education-program">
+            M.Sc. in Applied Statistical Modelling &amp; Health Informatics
+          </span>
           <span class="education-date">2021–2022</span>
         </p>
       </div>
@@ -806,21 +802,24 @@
         <p class="education-location">Liverpool, United Kingdom</p>
 
         <p class="education-degree">
-          <span class="education-program">B.Sc. in Mathematics &amp; Statistics</span>
+          <span class="education-program">
+            B.Sc. in Mathematics &amp; Statistics
+          </span>
           <span class="education-date">2018–2021</span>
         </p>
       </div>
     </div>
 
   </div>
-  
+
   <h2>Awards</h2>
+
   <p>
-    <b>NSF NRT-IMPACTS Fellowship</b> 
-    (Integrated Training Model in Plant and Computational Sciences) – 
+    <b>NSF NRT-IMPACTS Fellowship</b>
+    (Integrated Training Model in Plant and Computational Sciences) –
     Michigan State University (2023).
   </p>
-  
+
   <h2>Teaching</h2>
 
   <h3>Teaching Assistant</h3>
@@ -847,7 +846,7 @@
 
   <hr>
 
-  <p style="font-size: 0.95em; color: #555552; margin-top: 2em;">
+  <p style="font-size: 0.95em; color: #555552; margin-top: 1.25em;">
     A complete version of my curriculum vitae can be downloaded
     <a href="TairanSong_RESUME.pdf" target="_blank">
       here (PDF)
