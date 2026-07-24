@@ -29,6 +29,7 @@
 
     html {
       min-height: 100%;
+
       background:
         linear-gradient(
           180deg,
@@ -46,14 +47,14 @@
       top: 0;
       bottom: 0;
 
-      width: calc((100vw - 1240px) / 2);
+      width: calc((100vw - 1480px) / 2);
       min-width: 0;
-      max-width: 260px;
+      max-width: 180px;
 
       pointer-events: none;
       z-index: 0;
 
-      opacity: 0.52;
+      opacity: 0.42;
 
       background-image:
         radial-gradient(
@@ -115,6 +116,12 @@
       position: relative;
       z-index: 1;
 
+      width: calc(100% - 56px);
+      max-width: 1440px;
+
+      margin: 24px auto;
+      padding: 30px 46px 34px;
+
       font-family:
         "Helvetica Neue",
         Helvetica,
@@ -122,14 +129,10 @@
         sans-serif;
 
       font-size: 15px;
-      line-height: 1.55;
+      line-height: 1.45;
 
       color: var(--text-primary);
       background: var(--paper-background);
-
-      max-width: 1200px;
-      margin: 38px auto;
-      padding: 36px 58px 40px;
 
       text-align: justify;
       text-justify: inter-word;
@@ -159,6 +162,7 @@
       margin-bottom: 0.2em;
 
       color: #1c1c1b;
+
       font-size: 2.35em;
       font-weight: 700;
       letter-spacing: -0.025em;
@@ -168,12 +172,13 @@
     h2 {
       position: relative;
 
-      margin-top: 1.75em;
-      margin-bottom: 0.6em;
-      padding-bottom: 0.35em;
+      margin-top: 1.2em;
+      margin-bottom: 0.42em;
+      padding-bottom: 0.3em;
 
       color: var(--heading-color);
-      font-size: 1.42em;
+
+      font-size: 1.38em;
       font-weight: 650;
       letter-spacing: -0.01em;
 
@@ -194,27 +199,28 @@
     }
 
     h3 {
-      margin-top: 0.9em;
-      margin-bottom: 0.3em;
+      margin-top: 0.55em;
+      margin-bottom: 0.18em;
 
       color: #41413e;
-      font-size: 1.08em;
+
+      font-size: 1.05em;
       font-weight: 650;
     }
 
     p {
-      margin-top: 0.4em;
-      margin-bottom: 0.65em;
+      margin-top: 0.22em;
+      margin-bottom: 0.42em;
     }
 
     ul {
-      margin-top: 0.35em;
-      margin-bottom: 0.65em;
+      margin-top: 0.18em;
+      margin-bottom: 0.38em;
       padding-left: 1.25em;
     }
 
     li {
-      margin-bottom: 0.55em;
+      margin-bottom: 0.32em;
       padding-left: 0.15em;
     }
 
@@ -224,6 +230,7 @@
 
     a {
       color: var(--link-color);
+
       text-decoration: underline;
       text-decoration-color: rgba(63, 70, 75, 0.28);
       text-decoration-thickness: 1px;
@@ -253,10 +260,10 @@
 
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 24px;
 
-      margin: -8px -12px 20px;
-      padding: 20px;
+      margin: -6px -10px 14px;
+      padding: 18px;
 
       background:
         linear-gradient(
@@ -326,12 +333,12 @@
       margin-bottom: 0;
 
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
     hr {
-      margin-top: 28px;
-      margin-bottom: 16px;
+      margin-top: 22px;
+      margin-bottom: 12px;
 
       border: none;
       border-top: 1px solid var(--border-color);
@@ -339,26 +346,26 @@
 
     .education-list {
       max-width: 900px;
-      margin-top: 0.3em;
+      margin-top: 0.1em;
     }
 
     .education-item {
       display: grid;
-      grid-template-columns: 190px minmax(0, 1fr);
+      grid-template-columns: 180px minmax(0, 1fr);
       align-items: center;
-      column-gap: 30px;
+      column-gap: 26px;
 
-      min-height: 88px;
-      padding: 2px 0;
+      min-height: 76px;
+      padding: 0;
     }
 
     .education-item + .education-item {
-      margin-top: 3px;
+      margin-top: 0;
     }
 
     .education-logo-box {
-      width: 190px;
-      height: 76px;
+      width: 180px;
+      height: 68px;
 
       display: flex;
       align-items: center;
@@ -374,23 +381,23 @@
     }
 
     .logo-msu {
-      width: 66px;
-      height: 66px;
+      width: 62px;
+      height: 62px;
     }
 
     .logo-kcl {
-      width: 86px;
+      width: 82px;
       height: auto;
     }
 
     .logo-liverpool {
-      width: 142px;
+      width: 136px;
       height: auto;
     }
 
     .education-details {
       min-width: 0;
-      max-width: 610px;
+      max-width: 620px;
       text-align: left;
     }
 
@@ -398,21 +405,21 @@
       margin: 0 0 0.02em;
 
       color: var(--text-primary);
-      font-size: 1.04em;
+      font-size: 1.02em;
     }
 
     .education-location {
-      margin: 0 0 0.12em;
+      margin: 0 0 0.08em;
 
       color: var(--text-secondary);
-      font-size: 0.88em;
+      font-size: 0.86em;
     }
 
     .education-degree {
-      margin: 0.04em 0 0.16em;
+      margin: 0.02em 0 0.1em;
 
-      font-size: 0.92em;
-      line-height: 1.3;
+      font-size: 0.9em;
+      line-height: 1.25;
       text-align: left;
     }
 
@@ -425,11 +432,12 @@
       display: block;
 
       color: var(--text-secondary);
-      font-size: 0.92em;
+
+      font-size: 0.9em;
       white-space: nowrap;
     }
 
-    @media (max-width: 1320px) {
+    @media (max-width: 1520px) {
       html::before,
       html::after {
         display: none;
@@ -438,10 +446,13 @@
 
     @media (max-width: 700px) {
       body {
+        width: auto;
+
         margin: 14px 10px;
         padding: 24px 20px 28px;
 
         font-size: 14px;
+
         border-radius: 4px;
       }
 
@@ -464,8 +475,8 @@
       }
 
       h2 {
-        margin-top: 1.65em;
-        font-size: 1.32em;
+        margin-top: 1.1em;
+        font-size: 1.28em;
       }
 
       .education-list {
@@ -476,30 +487,25 @@
         grid-template-columns: 104px minmax(0, 1fr);
         column-gap: 16px;
 
-        min-height: 78px;
-        padding: 2px 0;
-      }
-
-      .education-item + .education-item {
-        margin-top: 4px;
+        min-height: 74px;
       }
 
       .education-logo-box {
         width: 104px;
-        height: 70px;
+        height: 66px;
       }
 
       .logo-msu {
-        width: 58px;
-        height: 58px;
+        width: 56px;
+        height: 56px;
       }
 
       .logo-kcl {
-        width: 76px;
+        width: 74px;
       }
 
       .logo-liverpool {
-        width: 100px;
+        width: 98px;
       }
 
       .education-details h3 {
@@ -509,6 +515,8 @@
 
     @media (max-width: 420px) {
       body {
+        width: auto;
+
         margin: 0;
         padding: 20px 16px 26px;
 
@@ -522,7 +530,7 @@
       }
 
       .intro {
-        margin: 0 0 18px;
+        margin: 0 0 16px;
       }
 
       img.profile {
@@ -531,26 +539,26 @@
       }
 
       .education-item {
-        grid-template-columns: 94px minmax(0, 1fr);
+        grid-template-columns: 92px minmax(0, 1fr);
         column-gap: 12px;
       }
 
       .education-logo-box {
-        width: 94px;
-        height: 66px;
+        width: 92px;
+        height: 64px;
       }
 
       .logo-msu {
-        width: 54px;
-        height: 54px;
+        width: 52px;
+        height: 52px;
       }
 
       .logo-kcl {
-        width: 72px;
+        width: 68px;
       }
 
       .logo-liverpool {
-        width: 90px;
+        width: 88px;
       }
     }
   </style>
@@ -587,7 +595,7 @@
         <a href="https://midilab.notion.site/" target="_blank">MIDI Lab</a><br>
 
         <a href="https://cmse.msu.edu/" target="_blank">
-          Department of Computational Mathematics, Science & Engineering (CMSE)
+          Department of Computational Mathematics, Science &amp; Engineering (CMSE)
         </a><br>
 
         <a href="https://msu.edu/" target="_blank">
@@ -669,12 +677,12 @@
     </li>
   </ul>
 
-  <h2>Publications & Conference Presentations</h2>
+  <h2>Publications &amp; Conference Presentations</h2>
 
   <h3>Journal Article</h3>
 
   <p>
-    Zhang, T., Jia, H., <b>Song, T.</b>, Lv, L., Gulhan, D. C., ..., & Shen, N. (2023).
+    Zhang, T., Jia, H., <b>Song, T.</b>, Lv, L., Gulhan, D. C., ..., &amp; Shen, N. (2023).
     <i>
       <a
         href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-023-01269-1"
@@ -691,7 +699,7 @@
 
   <p>
     <b>Song, T.</b>, Noyes-Ardrey, S., Muterspaugh, R. D.,
-    Munavar Ali, M. A., ..., & Alessio, A. M. (2026).
+    Munavar Ali, M. A., ..., &amp; Alessio, A. M. (2026).
     <i>
       Core-to-Margin Radiomic Profiling for Predicting Kidney Cancer Grade
       from Variable-Phase CT.
@@ -706,7 +714,7 @@
 
   <p>
     Muterspaugh, R. D., Munavar Ali, M. A., <b>Song, T.</b>, ...,
-    & Alessio, A. M. (2026).
+    &amp; Alessio, A. M. (2026).
     <i>
       <a
         href="https://scholarlyworks.corewellhealth.org/corewellhealth_west_research_confabstract/178/"
@@ -846,7 +854,7 @@
 
   <hr>
 
-  <p style="font-size: 0.95em; color: #555552; margin-top: 1.25em;">
+  <p style="font-size: 0.95em; color: #555552; margin-top: 1em;">
     A complete version of my curriculum vitae can be downloaded
     <a href="TairanSong_RESUME.pdf" target="_blank">
       here (PDF)
